@@ -5,7 +5,7 @@ public class Calculator {
 	//variables
 	float operando1=0,operando2=0,acumulado=0,num=0;
 	String operacionActual;
-	final String[][] operations = {{"Adiction","+"}, {"Sustraction","-"}, {"Multiplication","*"}, {"Division","/"}, {"Salir","@"}};
+	final String[][] operations = {{"Adiction","+"}, {"Sustraction","-"}, {"Multiplication","*"}, {"Division","/"}};
 	
 	//Constructor
 	Calculator(){

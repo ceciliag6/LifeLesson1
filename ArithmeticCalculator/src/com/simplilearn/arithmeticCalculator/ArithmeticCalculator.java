@@ -9,6 +9,8 @@ public class ArithmeticCalculator {
 		//Variable definition
 		float result = 0;
 		String operation;
+		String varOut;
+		final String goOut="Yes", noGoOut="No";
 		Calculator calc = new Calculator(0,0);
 				
 		//Scanner variable definition
@@ -45,15 +47,22 @@ public class ArithmeticCalculator {
 						result = calc.division(calc.getOperando1(),calc.getOperando2());
 					}				
 				} else if (operation.equals("@")) {
-					System.out.println("Bye Bye");
-					sc.close();
-					break;
+					
 				} else {
 					result = 0;
 					System.out.println("The operation is not correct");
 				}
 				System.out.println(("result ".concat(String.valueOf(result))));
-		} while (!operation.equals("@"));
+				
+				System.out.println("If you want to leave, please write ".concat(goOut).concat(" in another case press ").concat(noGoOut));
+				varOut = sc.next();
+				if (varOut.equals(goOut)) {
+					System.out.println("Bye Bye");
+					sc.close();
+					break;
+				}
+				
+		} while (true);
 	}
 	
 
